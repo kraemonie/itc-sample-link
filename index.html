@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i love my gf my baby</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <input type="checkbox" id="filter-switch" class="state-input">
+    <input type="checkbox" id="cart-switch" class="state-input">
+    
+    <input type="checkbox" id="add-1" class="add-input"><input type="checkbox" id="add-2" class="add-input">
+    <input type="checkbox" id="add-3" class="add-input"><input type="checkbox" id="add-4" class="add-input">
+    <input type="checkbox" id="add-5" class="add-input"><input type="checkbox" id="add-6" class="add-input">
+    <input type="checkbox" id="add-7" class="add-input"><input type="checkbox" id="add-8" class="add-input">
+    <input type="checkbox" id="add-9" class="add-input"><input type="checkbox" id="add-10" class="add-input">
+    <input type="checkbox" id="add-11" class="add-input"><input type="checkbox" id="add-12" class="add-input">
+
+    <input type="checkbox" id="view-1" class="view-input">
+
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <a href="index.html" class="logo">pls lord give me a sign</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Shop All</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Our Team</a></li>
+                <li><a href="index.html" class="sale-link">Sale</a></li>
+            </ul>
+            <label for="cart-switch" class="cart-trigger">
+                YOUR BAG i don know how to make the 0 change :( (<span class="counter-target">0</span>)
+            </label>
+        </div>
+    </nav>
+
+    <div class="cart-drawer">
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+            <label for="cart-switch" class="close-cart">✕</label>
+        </div>
+        <div class="cart-items">
+            <div class="empty-msg">Your bag is empty.</div>
+            <div class="cart-item item-1">
+                <img src="https://placehold.co/100x100/be123c/fff?text=Lip" alt="Img"><div class="item-details"><h4>Colourtint</h4><p>₱349.00</p></div><label for="add-1" class="remove-btn">Remove</label>
+            </div>
+            <div class="cart-item item-2">
+                <img src="https://placehold.co/100x100/fb7185/fff?text=Lip" alt="Img"><div class="item-details"><h4>Easy Matte</h4><p>₱349.00</p></div><label for="add-2" class="remove-btn">Remove</label>
+            </div>
+            <div class="cart-item item-3">
+                <img src="https://placehold.co/100x100/fda4af/fff?text=Lip" alt="Img"><div class="item-details"><h4>Colourglaze</h4><p>₱299.00</p></div><label for="add-3" class="remove-btn">Remove</label>
+            </div>
+            <div class="cart-item item-4">
+                <img src="https://placehold.co/100x100/881337/fff?text=Lip" alt="Img"><div class="item-details"><h4>Velvet Tint</h4><p>₱349.00</p></div><label for="add-4" class="remove-btn">Remove</label>
+            </div>
+             <div class="cart-item item-5">
+                <img src="https://placehold.co/100x100/f5f5f5/333?text=Face" alt="Img"><div class="item-details"><h4>First Base</h4><p>₱599.00</p></div><label for="add-5" class="remove-btn">Remove</label>
+            </div>
+             <div class="cart-item item-6">
+                <img src="https://placehold.co/100x100/f3e8ff/333?text=Face" alt="Img"><div class="item-details"><h4>Shimmertint</h4><p>₱399.00</p></div><label for="add-6" class="remove-btn">Remove</label>
+            </div>
+            <div class="cart-item item-7">
+                <img src="https://placehold.co/100x100/ffedd5/333?text=Face" alt="Img"><div class="item-details"><h4>Face Duo</h4><p>₱449.00</p></div><label for="add-7" class="remove-btn">Remove</label>
+            </div>
+            <div class="cart-item item-8">
+                <img src="https://placehold.co/100x100/e0f2fe/333?text=Face" alt="Img"><div class="item-details"><h4>Setting Spray</h4><p>₱499.00</p></div><label for="add-8" class="remove-btn">Remove</label>
+            </div>
+             <div class="cart-item item-9">
+                <img src="https://placehold.co/100x100/1e293b/fff?text=Eye" alt="Img"><div class="item-details"><h4>Brow Gel</h4><p>₱299.00</p></div><label for="add-9" class="remove-btn">Remove</label>
+            </div>
+             <div class="cart-item item-10">
+                <img src="https://placehold.co/100x100/334155/fff?text=Eye" alt="Img"><div class="item-details"><h4>Liner Pen</h4><p>₱299.00</p></div><label for="add-10" class="remove-btn">Remove</label>
+            </div>
+            <div class="cart-item item-11">
+                <img src="https://placehold.co/100x100/475569/fff?text=Eye" alt="Img"><div class="item-details"><h4>Brow Pencil</h4><p>₱349.00</p></div><label for="add-11" class="remove-btn">Remove</label>
+            </div>
+            <div class="cart-item item-12">
+                <img src="https://placehold.co/100x100/64748b/fff?text=Eye" alt="Img"><div class="item-details"><h4>Mascara</h4><p>₱399.00</p></div><label for="add-12" class="remove-btn">Remove</label>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <button class="btn-checkout">CHECKOUT</button>
+        </div>
+    </div>
+    <label for="cart-switch" class="backdrop cart-backdrop"></label>
+
+    <div class="container">
+        <div class="top-bar">
+            <div class="breadcrumbs"><a href="#">Home</a> / Shop All</div>
+            <label for="filter-switch" class="mobile-filter-btn">CATEGORIES</label>
+        </div>
+
+        <section class="main-shop-section">
+            
+            <aside class="sidebar">
+                <label for="filter-switch" class="close-sidebar">✕ CLOSE</label>
+                <div class="category-list">
+                    <a href="#lips" class="cat-link">Lips</a>
+                    <a href="#face" class="cat-link">Face</a>
+                    <a href="#eyes" class="cat-link">Eyes</a>
+                    <a href="#brows" class="cat-link">Eyebrows</a>
+                </div>
+            </aside>
+
+            <main class="products-area">
+                
+                <div id="lips" class="products-group">
+                    <h2 class="category-title">Lips</h2>
+                    <div class="products-grid-layout">
+                        <div class="product-card">
+                            <div class="badge-sale">SALE</div>
+                            <div class="p-image"><img src="https://placehold.co/600x600/be123c/fff?text=Colourtint" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Colourtint</h3><div class="price"><span class="old-price">₱399.00</span> ₱349.00</div>
+                                <label for="add-1" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="p-image"><img src="https://placehold.co/600x600/fb7185/fff?text=Easy+Matte" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Easy Matte</h3><div class="price">₱349.00</div>
+                                <label for="add-2" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                             <div class="badge-new">NEW</div>
+                            <div class="p-image"><img src="https://placehold.co/600x600/fda4af/fff?text=Colourglaze" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Colourglaze</h3><div class="price">₱299.00</div>
+                                <label for="add-3" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                         <div class="product-card">
+                            <div class="p-image"><img src="https://placehold.co/600x600/881337/fff?text=Velvet+Tint" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Velvet Tint</h3><div class="price">₱349.00</div>
+                                <label for="add-4" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="face" class="products-group">
+                    <h2 class="category-title">Face</h2>
+                    <div class="products-grid-layout">
+                        <div class="product-card">
+                            <div class="p-image"><img src="https://placehold.co/600x600/f5f5f5/333?text=First+Base" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>First Base</h3><div class="price">₱599.00</div>
+                                <label for="add-5" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="p-image"><img src="https://placehold.co/600x600/f3e8ff/333?text=Shimmertint" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Shimmertint</h3><div class="price">₱399.00</div>
+                                <label for="add-6" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                         <div class="product-card">
+                            <div class="badge-sale">SALE</div>
+                            <div class="p-image"><img src="https://placehold.co/600x600/ffedd5/333?text=Face+Duo" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Face Duo</h3><div class="price"><span class="old-price">₱599.00</span> ₱449.00</div>
+                                <label for="add-7" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="p-image"><img src="https://placehold.co/600x600/e0f2fe/333?text=Setting+Spray" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Setting Spray</h3><div class="price">₱499.00</div>
+                                <label for="add-8" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="eyes" class="products-group">
+                    <h2 class="category-title">Eyes & Brows</h2>
+                    <div class="products-grid-layout">
+                        <div class="product-card">
+                             <div class="badge-new">NEW</div>
+                            <div class="p-image"><img src="https://placehold.co/600x600/1e293b/fff?text=Brow+Gel" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Clear Brow Gel</h3><div class="price">₱299.00</div>
+                                <label for="add-9" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="p-image"><img src="https://placehold.co/600x600/334155/fff?text=Liner" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Liner Pen</h3><div class="price">₱299.00</div>
+                                <label for="add-10" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="p-image"><img src="https://placehold.co/600x600/475569/fff?text=Brow+Pencil" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Brow Pencil</h3><div class="price">₱349.00</div>
+                                <label for="add-11" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <div class="p-image"><img src="https://placehold.co/600x600/64748b/fff?text=Mascara" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Volume Mascara</h3><div class="price">₱399.00</div>
+                                <label for="add-12" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                             <div id="brows"></div> <div class="p-image"><img src="https://placehold.co/600x600/e2e8f0/333?text=Palette" alt="Product"></div>
+                            <div class="p-info">
+                                <h3>Eye Palette</h3><div class="price">₱599.00</div>
+                                <label for="add-9" class="btn-add-cart">ADD TO CART</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </section>
+    </div>
+    <label for="filter-switch" class="backdrop filter-backdrop"></label>
+
+</body>
+</html>
