@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Blush Babe</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <input type="checkbox" id="cart-switch" class="state-input">
     <input type="checkbox" id="filter-switch" class="state-input">
-
-    <input type="checkbox" id="add-1" class="add-input"><input type="checkbox" id="add-2" class="add-input">
+    <input type="checkbox" id="menu-switch" class="state-input"> <input type="checkbox" id="add-1" class="add-input"><input type="checkbox" id="add-2" class="add-input">
     <input type="checkbox" id="add-3" class="add-input"><input type="checkbox" id="add-4" class="add-input">
     <input type="checkbox" id="add-5" class="add-input"><input type="checkbox" id="add-6" class="add-input">
     <input type="checkbox" id="add-7" class="add-input"><input type="checkbox" id="add-8" class="add-input">
     <input type="checkbox" id="add-9" class="add-input"><input type="checkbox" id="add-10" class="add-input">
-    <input type="checkbox" id="add-11" class="add-input"><input type="checkbox" id="add-12" class="add-input">
 
-        <nav class="navbar">
+    <nav class="navbar">
         <div class="container nav-flex">
             
             <label for="menu-switch" class="menu-icon">☰</label>
@@ -31,9 +26,9 @@
             
             <ul class="nav-links">
                 <li class="mobile-only"><label for="menu-switch" class="close-menu">✕ CLOSE</label></li>
-                
-                <li><a href="index.html" class="active">Shop</a></li>
-                <li><a href="about.html">About</a></li>
+
+                <li><a href="index.html">Shop</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="team.html">Team</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
@@ -43,6 +38,8 @@
             </label>
         </div>
     </nav>
+    
+    <label for="menu-switch" class="menu-backdrop"></label>
 
     <div class="cart-drawer">
         <div class="cart-header">
@@ -51,21 +48,9 @@
         </div>
         <div class="cart-items">
             <div class="empty-msg">Your bag is empty.</div>
-            <div class="cart-item item-1">
-                <img src="https://placehold.co/100x100/be123c/fff?text=Lip" alt="Img">
-                <div class="item-details">
-                    <h4>Colourtint</h4>
-                    <p>₱349.00</p>
-                </div><label for="add-1" class="remove-btn">Remove</label>
+            <div class="cart-item item-1"><img src="images/Concealer.jpg" alt="Img"><div class="item-details"><h4>Concealer</h4><p>₱299.00</p></div><label for="add-1" class="remove-btn">Remove</label></div>
+            <div class="cart-item item-2"><img src="images/FacePowder.jpg" alt="Img"><div class="item-details"><h4>Face Powder</h4><p>₱349.00</p></div><label for="add-2" class="remove-btn">Remove</label></div>
             </div>
-            <div class="cart-item item-2">
-                <img src="https://placehold.co/100x100/fb7185/fff?text=Lip" alt="Img">
-                <div class="item-details">
-                    <h4>Easy Matte</h4>
-                    <p>₱349.00</p>
-                </div><label for="add-2" class="remove-btn">Remove</label>
-            </div>
-        </div>
         <div class="cart-footer">
             <button class="btn-checkout">CHECKOUT</button>
         </div>
@@ -75,19 +60,13 @@
     <div class="about-page-container">
         <h1 class="section-title">We Make the World Blush.</h1>
         <div class="about-text">
-            <p>Welcome to Blush Babe. We are a homegrown beauty brand that champions inclusivity, self-expression, and
-                the Filipino spirit. Born out of a desire to create products that work for our unique climate and skin
-                tones, we have grown into a community of beauty lovers.</p>
+            <p>Welcome to Blush Babe. We are a homegrown beauty brand that champions inclusivity, self-expression, and the Filipino spirit. Born out of a desire to create products that work for our unique climate and skin tones, we have grown into a community of beauty lovers.</p>
             <br>
-            <p>Our mission is simple: <strong>Beauty in every shade.</strong> Whether you are looking for that perfect
-                everyday tint or a bold statement lip, we have something for you. Our products are cruelty-free,
-                multi-use, and designed for real life.</p>
+            <p>Our mission is simple: <strong>Beauty in every shade.</strong> Whether you are looking for that perfect everyday tint or a bold statement lip, we have something for you. Our products are cruelty-free, multi-use, and designed for real life.</p>
             <br>
-            <img src="https://placehold.co/800x400/ffe4e1/333?text=Our+Office"
-                style="width:100%; margin-top:40px; border-radius:12px;">
+            <img src="https://placehold.co/800x400/ffe4e1/333?text=Our+Office" style="width:100%; margin-top:40px; border-radius:12px;">
         </div>
     </div>
 
 </body>
-
 </html>
