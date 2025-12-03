@@ -1568,7 +1568,7 @@ img { display: block; width: 100%; }
     background: #f9f9f9; 
     border-radius: 8px; 
     overflow: hidden;
-    aspect-ratio: 1 / 1; /* FORCES SQUARE */
+    aspect-ratio: 1 / 1; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1576,7 +1576,7 @@ img { display: block; width: 100%; }
 .p-image img { 
     width: 100%; 
     height: 100%; 
-    object-fit: cover; /* FILLS SQUARE WITHOUT STRETCHING */
+    object-fit: cover; 
 }
 
 .p-info h3 { font-family: var(--font-head); font-size: 1.1rem; margin-bottom: 5px; text-transform: uppercase; }
@@ -1598,7 +1598,7 @@ img { display: block; width: 100%; }
     align-items: center; 
     justify-content: center; 
     position: relative;
-    aspect-ratio: 1 / 1; /* SQUARE */
+    aspect-ratio: 1 / 1; 
 }
 .modal-image img { 
     width: 100%; 
@@ -1613,14 +1613,14 @@ img { display: block; width: 100%; }
 .shade-title { font-weight: 700; margin-bottom: 10px; display: block; font-size: 0.9rem; text-transform: uppercase; }
 .tones-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 
-/* Button Styling (Fixed Logic) */
+/* Button Styling */
 .shade-select-input { display: none; }
 .shade-option { border: 1px solid #ddd; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer; transition: 0.2s; background: white; }
 .shade-option:hover { border-color: var(--brand-pink); background: #fff0f5; }
 .shade-option span { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 2px; }
 .shade-option small { font-size: 0.7rem; color: #666; }
 
-/* THE HIGHLIGHT FIX (Applies to all radio groups) */
+/* HIGHLIGHT FIX */
 .shade-select-input:nth-of-type(1):checked ~ .modal-details .tones-grid label:nth-of-type(1),
 .shade-select-input:nth-of-type(2):checked ~ .modal-details .tones-grid label:nth-of-type(2),
 .shade-select-input:nth-of-type(3):checked ~ .modal-details .tones-grid label:nth-of-type(3) {
@@ -1650,7 +1650,13 @@ img { display: block; width: 100%; }
 @media (max-width: 768px) {
     .modal-content { flex-direction: column; max-height: 90vh; overflow-y: auto; }
     .modal-image, .modal-details { width: 100%; }
-    .modal-image { height: 250px; }
+    
+    /* MOBILE IMAGE FIX: Force Square here too! */
+    .modal-image { 
+        height: auto; 
+        aspect-ratio: 1 / 1; 
+    }
+    
     .products-grid-layout { grid-template-columns: repeat(2, 1fr); }
     .nav-links { display: none; }
     .sidebar { display: none; }
