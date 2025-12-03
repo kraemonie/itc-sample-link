@@ -1486,7 +1486,7 @@ img { display: block; width: 100%; }
 .counter-target { font-size: 0; }
 .counter-target::after { content: counter(bag); font-size: 1rem; }
 
-/* Cart Drawer Item Visibility (Up to 9 items) */
+/* Cart Drawer Item Visibility */
 .cart-item { display: none; } 
 #add-1:checked ~ .cart-drawer .item-1,
 #add-2:checked ~ .cart-drawer .item-2,
@@ -1496,7 +1496,8 @@ img { display: block; width: 100%; }
 #add-6:checked ~ .cart-drawer .item-6,
 #add-7:checked ~ .cart-drawer .item-7,
 #add-8:checked ~ .cart-drawer .item-8,
-#add-9:checked ~ .cart-drawer .item-9 { display: flex; }
+#add-9:checked ~ .cart-drawer .item-9,
+#add-10:checked ~ .cart-drawer .item-10 { display: flex; }
 
 #add-1:checked ~ .cart-drawer .empty-msg,
 #add-2:checked ~ .cart-drawer .empty-msg,
@@ -1506,13 +1507,15 @@ img { display: block; width: 100%; }
 #add-6:checked ~ .cart-drawer .empty-msg,
 #add-7:checked ~ .cart-drawer .empty-msg,
 #add-8:checked ~ .cart-drawer .empty-msg,
-#add-9:checked ~ .cart-drawer .empty-msg { display: none; }
+#add-9:checked ~ .cart-drawer .empty-msg,
+#add-10:checked ~ .cart-drawer .empty-msg { display: none; }
 
 /* Modal Visibility */
 .modal-overlay { display: none; }
 #modal-1:checked ~ .modal-1, #modal-2:checked ~ .modal-2, #modal-3:checked ~ .modal-3,
 #modal-4:checked ~ .modal-4, #modal-5:checked ~ .modal-5, #modal-6:checked ~ .modal-6,
-#modal-7:checked ~ .modal-7, #modal-8:checked ~ .modal-8, #modal-9:checked ~ .modal-9 { display: flex; }
+#modal-7:checked ~ .modal-7, #modal-8:checked ~ .modal-8, #modal-9:checked ~ .modal-9,
+#modal-10:checked ~ .modal-10 { display: flex; }
 
 
 /* --- 4. NAVBAR --- */
@@ -1552,13 +1555,30 @@ img { display: block; width: 100%; }
 
 /* --- 7. PRODUCT GRID --- */
 .products-area { flex: 1; }
-.category-title { font-family: var(--font-head); font-size: 2rem; margin: 40px 0 20px 0; border-bottom: 2px solid --brand-light-pink; text-transform: uppercase; color: var(--brand-black); }
+.category-title { font-family: var(--font-head); font-size: 2rem; margin: 40px 0 20px 0; border-bottom: 2px solid var(--brand-light-pink); text-transform: uppercase; color: var(--brand-black); }
 .products-group:first-child .category-title { margin-top: 0; }
 .products-grid-layout { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 50px; }
 .product-card { text-align: center; cursor: pointer; transition: transform 0.2s; }
 .product-card:hover { transform: translateY(-5px); }
-.p-image { margin-bottom: 15px; position: relative; background: #f9f9f9; border-radius: 8px; overflow: hidden; }
-.p-image img { width: 100%; display: block; }
+
+/* SQUARE IMAGE FIX */
+.p-image { 
+    margin-bottom: 15px; 
+    position: relative; 
+    background: #f9f9f9; 
+    border-radius: 8px; 
+    overflow: hidden;
+    aspect-ratio: 1 / 1; /* FORCES SQUARE */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* FILLS SQUARE WITHOUT STRETCHING */
+}
+
 .p-info h3 { font-family: var(--font-head); font-size: 1.1rem; margin-bottom: 5px; text-transform: uppercase; }
 .price { color: var(--brand-pink); font-weight: 700; }
 .btn-select-shade { display: block; width: 100%; background: var(--brand-black); color: white; padding: 10px 0; margin-top: 10px; font-family: var(--font-head); text-transform: uppercase; font-size: 0.9rem; cursor: pointer; letter-spacing: 1px; }
@@ -1570,8 +1590,21 @@ img { display: block; width: 100%; }
 @keyframes popUp { from { transform: scale(0.95); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 .close-modal { position: absolute; top: 15px; right: 20px; font-size: 1.5rem; cursor: pointer; font-weight: bold; color: #999; z-index: 5; }
 
-.modal-image { width: 50%; background: #f9f9f9; display: flex; align-items: center; justify-content: center; position: relative; }
-.modal-image img { width: 100%; height: 100%; object-fit: cover; } /* Ensure image fills space */
+/* MODAL SQUARE IMAGE FIX */
+.modal-image { 
+    width: 50%; 
+    background: #f9f9f9; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative;
+    aspect-ratio: 1 / 1; /* SQUARE */
+}
+.modal-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
 
 .modal-details { width: 50%; padding: 40px; display: flex; flex-direction: column; }
 .modal-title { font-family: var(--font-head); font-size: 2rem; margin-bottom: 10px; text-transform: uppercase; }
@@ -1580,33 +1613,35 @@ img { display: block; width: 100%; }
 .shade-title { font-weight: 700; margin-bottom: 10px; display: block; font-size: 0.9rem; text-transform: uppercase; }
 .tones-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 
-/* Button Styling */
-.shade-select-input { display: none; } /* Hide the radio circle */
-.shade-option { border: 1px solid #ddd; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer; transition: 0.2s; }
-.shade-option:hover { border-color: var(--brand-pink); background: var(--brand-light-pink); }
+/* Button Styling (Fixed Logic) */
+.shade-select-input { display: none; }
+.shade-option { border: 1px solid #ddd; border-radius: 8px; padding: 10px; text-align: center; cursor: pointer; transition: 0.2s; background: white; }
+.shade-option:hover { border-color: var(--brand-pink); background: #fff0f5; }
 .shade-option span { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 2px; }
 .shade-option small { font-size: 0.7rem; color: #666; }
 
-/* Selected State */
-.shade-select-input:checked + .shade-option { border: 2px solid var(--brand-pink); background-color: var(--brand-light-pink); color: var(--brand-pink); }
+/* THE HIGHLIGHT FIX (Applies to all radio groups) */
+.shade-select-input:nth-of-type(1):checked ~ .modal-details .tones-grid label:nth-of-type(1),
+.shade-select-input:nth-of-type(2):checked ~ .modal-details .tones-grid label:nth-of-type(2),
+.shade-select-input:nth-of-type(3):checked ~ .modal-details .tones-grid label:nth-of-type(3) {
+    border: 2px solid var(--brand-pink);
+    background-color: var(--brand-light-pink);
+    color: var(--brand-pink);
+}
 
 .btn-buy-now { background: var(--brand-pink); color: white; text-align: center; padding: 15px; font-family: var(--font-head); text-transform: uppercase; font-size: 1.2rem; border-radius: 8px; cursor: pointer; letter-spacing: 1px; margin-top: auto; }
 .btn-buy-now:hover { background: #be123c; }
 
-/* --- 9. IMAGE SWAP LOGIC (NEW) --- */
-/* By default, hide the tone images */
+/* --- 9. IMAGE SWAP LOGIC --- */
 .img-tone-1, .img-tone-2, .img-tone-3 { display: none; }
 .img-default { display: block; }
 
-/* If 1st radio is checked -> Show Tone 1, Hide Default */
 .shade-select-input:nth-of-type(1):checked ~ .modal-image .img-tone-1 { display: block; }
 .shade-select-input:nth-of-type(1):checked ~ .modal-image .img-default { display: none; }
 
-/* If 2nd radio is checked -> Show Tone 2, Hide Default */
 .shade-select-input:nth-of-type(2):checked ~ .modal-image .img-tone-2 { display: block; }
 .shade-select-input:nth-of-type(2):checked ~ .modal-image .img-default { display: none; }
 
-/* If 3rd radio is checked -> Show Tone 3, Hide Default */
 .shade-select-input:nth-of-type(3):checked ~ .modal-image .img-tone-3 { display: block; }
 .shade-select-input:nth-of-type(3):checked ~ .modal-image .img-default { display: none; }
 
