@@ -28,20 +28,29 @@
     <input type="checkbox" id="add-7" class="add-input"><input type="checkbox" id="add-8" class="add-input">
     <input type="checkbox" id="add-9" class="add-input"><input type="checkbox" id="add-10" class="add-input">
 
-    <nav class="navbar">
-        <div class="container nav-flex">
-            <a href="index.html" class="logo">BLUSH BABE</a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Shop</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-            <label for="cart-switch" class="cart-trigger">
-                BAG (<span class="counter-target">0</span>)
-            </label>
-        </div>
-    </nav>
+    <input type="checkbox" id="menu-switch" class="state-input">
+
+<nav class="navbar">
+    <div class="container nav-flex">
+        <label for="menu-switch" class="menu-icon">☰</label>
+
+        <a href="index.html" class="logo">BLUSH BABE</a>
+
+        <ul class="nav-links">
+            <li class="mobile-only"><label for="menu-switch" class="close-menu">✕ CLOSE</label></li>
+
+            <li><a href="index.html" class="active">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+
+        <label for="cart-switch" class="cart-trigger">
+            BAG (<span class="counter-target">0</span>)
+        </label>
+    </div>
+</nav>
+<label for="menu-switch" class="backdrop menu-backdrop"></label>
 
     <div class="cart-drawer">
         <div class="cart-header">
