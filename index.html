@@ -10,6 +10,8 @@
 <body>
 
     <input type="checkbox" id="cart-switch" class="state-input">
+    <input type="checkbox" id="menu-switch" class="state-input">
+    <input type="checkbox" id="filter-switch" class="state-input">
     
     <input type="checkbox" id="modal-1" class="modal-trigger">
     <input type="checkbox" id="modal-2" class="modal-trigger">
@@ -28,29 +30,29 @@
     <input type="checkbox" id="add-7" class="add-input"><input type="checkbox" id="add-8" class="add-input">
     <input type="checkbox" id="add-9" class="add-input"><input type="checkbox" id="add-10" class="add-input">
 
-    <input type="checkbox" id="menu-switch" class="state-input">
+    <nav class="navbar">
+        <div class="container nav-flex">
+            
+            <label for="menu-switch" class="menu-icon">☰</label>
 
-<nav class="navbar">
-    <div class="container nav-flex">
-        <label for="menu-switch" class="menu-icon">☰</label>
+            <a href="index.html" class="logo">BLUSH BABE</a>
+            
+            <ul class="nav-links">
+                <li class="mobile-only"><label for="menu-switch" class="close-menu">✕ CLOSE</label></li>
+                
+                <li><a href="index.html" class="active">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
 
-        <a href="index.html" class="logo">BLUSH BABE</a>
-
-        <ul class="nav-links">
-            <li class="mobile-only"><label for="menu-switch" class="close-menu">✕ CLOSE</label></li>
-
-            <li><a href="index.html" class="active">Shop</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-        </ul>
-
-        <label for="cart-switch" class="cart-trigger">
-            BAG (<span class="counter-target">0</span>)
-        </label>
-    </div>
-</nav>
-<label for="menu-switch" class="backdrop menu-backdrop"></label>
+            <label for="cart-switch" class="cart-trigger">
+                BAG (<span class="counter-target">0</span>)
+            </label>
+        </div>
+    </nav>
+    
+    <label for="menu-switch" class="menu-backdrop"></label>
 
     <div class="cart-drawer">
         <div class="cart-header">
@@ -79,26 +81,13 @@
     <div class="modal-overlay modal-1">
         <div class="modal-content">
             <label for="modal-1" class="close-modal">✕</label>
-            <input type="radio" name="shade-1" id="s1-1" class="shade-select-input">
-            <input type="radio" name="shade-1" id="s1-2" class="shade-select-input">
-            <input type="radio" name="shade-1" id="s1-3" class="shade-select-input">
+            <input type="radio" name="shade-1" id="s1-1" class="shade-select-input"><input type="radio" name="shade-1" id="s1-2" class="shade-select-input"><input type="radio" name="shade-1" id="s1-3" class="shade-select-input">
             <div class="modal-image">
-                <img src="images/Concealer.jpg" class="img-default">
-                <img src="images/Milkfoam.jpg" class="img-tone-1">
-                <img src="images/BrownSugar.jpg" class="img-tone-2">
-                <img src="images/WinterPearl.jpg" class="img-tone-3">
+                <img src="images/Concealer.jpg" class="img-default"><img src="images/Milkfoam.jpg" class="img-tone-1"><img src="images/BrownSugar.jpg" class="img-tone-2"><img src="images/WinterPearl.jpg" class="img-tone-3">
             </div>
             <div class="modal-details">
-                <h2 class="modal-title">Concealer</h2>
-                <div class="modal-price">₱299.00</div>
-                <div class="shade-selector">
-                    <span class="shade-title">Select Tone:</span>
-                    <div class="tones-grid">
-                        <label for="s1-1" class="shade-option"><span>Milkfoam</span><small>Neutral</small></label>
-                        <label for="s1-2" class="shade-option"><span>BrownSugar</span><small>Warm</small></label>
-                        <label for="s1-3" class="shade-option"><span>WinterPearl</span><small>Cool</small></label>
-                    </div>
-                </div>
+                <h2 class="modal-title">Concealer</h2><div class="modal-price">₱299.00</div>
+                <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s1-1" class="shade-option"><span>Milkfoam</span><small>Neutral</small></label><label for="s1-2" class="shade-option"><span>BrownSugar</span><small>Warm</small></label><label for="s1-3" class="shade-option"><span>WinterPearl</span><small>Cool</small></label></div></div>
                 <label for="add-1" class="btn-buy-now">ADD TO BAG</label>
             </div>
         </div>
@@ -107,26 +96,13 @@
     <div class="modal-overlay modal-2">
         <div class="modal-content">
             <label for="modal-2" class="close-modal">✕</label>
-            <input type="radio" name="shade-2" id="s2-1" class="shade-select-input">
-            <input type="radio" name="shade-2" id="s2-2" class="shade-select-input">
-            <input type="radio" name="shade-2" id="s2-3" class="shade-select-input">
+            <input type="radio" name="shade-2" id="s2-1" class="shade-select-input"><input type="radio" name="shade-2" id="s2-2" class="shade-select-input"><input type="radio" name="shade-2" id="s2-3" class="shade-select-input">
             <div class="modal-image">
-                <img src="images/FacePowder.jpg" class="img-default">
-                <img src="images/Oolong.jpg" class="img-tone-1">
-                <img src="images/Roast.jpg" class="img-tone-2">
-                <img src="images/SnowCream.jpg" class="img-tone-3">
+                <img src="images/FacePowder.jpg" class="img-default"><img src="images/Oolong.jpg" class="img-tone-1"><img src="images/Roast.jpg" class="img-tone-2"><img src="images/SnowCream.jpg" class="img-tone-3">
             </div>
             <div class="modal-details">
-                <h2 class="modal-title">Face Powder</h2>
-                <div class="modal-price">₱349.00</div>
-                <div class="shade-selector">
-                    <span class="shade-title">Select Tone:</span>
-                    <div class="tones-grid">
-                        <label for="s2-1" class="shade-option"><span>Oolong</span><small>Neutral</small></label>
-                        <label for="s2-2" class="shade-option"><span>Roast</span><small>Warm</small></label>
-                        <label for="s2-3" class="shade-option"><span>SnowCream</span><small>Cool</small></label>
-                    </div>
-                </div>
+                <h2 class="modal-title">Face Powder</h2><div class="modal-price">₱349.00</div>
+                <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s2-1" class="shade-option"><span>Oolong</span><small>Neutral</small></label><label for="s2-2" class="shade-option"><span>Roast</span><small>Warm</small></label><label for="s2-3" class="shade-option"><span>SnowCream</span><small>Cool</small></label></div></div>
                 <label for="add-2" class="btn-buy-now">ADD TO BAG</label>
             </div>
         </div>
@@ -135,26 +111,13 @@
     <div class="modal-overlay modal-3">
         <div class="modal-content">
             <label for="modal-3" class="close-modal">✕</label>
-            <input type="radio" name="shade-3" id="s3-1" class="shade-select-input">
-            <input type="radio" name="shade-3" id="s3-2" class="shade-select-input">
-            <input type="radio" name="shade-3" id="s3-3" class="shade-select-input">
+            <input type="radio" name="shade-3" id="s3-1" class="shade-select-input"><input type="radio" name="shade-3" id="s3-2" class="shade-select-input"><input type="radio" name="shade-3" id="s3-3" class="shade-select-input">
             <div class="modal-image">
-                <img src="images/Foundation.jpg" class="img-default">
-                <img src="images/ClassicMilk.jpg" class="img-tone-1">
-                <img src="images/CaramelBrew.jpg" class="img-tone-2">
-                <img src="images/IcedVanilla.jpg" class="img-tone-3">
+                <img src="images/Foundation.jpg" class="img-default"><img src="images/ClassicMilk.jpg" class="img-tone-1"><img src="images/CaramelBrew.jpg" class="img-tone-2"><img src="images/IcedVanilla.jpg" class="img-tone-3">
             </div>
             <div class="modal-details">
-                <h2 class="modal-title">Foundation</h2>
-                <div class="modal-price">₱499.00</div>
-                <div class="shade-selector">
-                    <span class="shade-title">Select Tone:</span>
-                    <div class="tones-grid">
-                        <label for="s3-1" class="shade-option"><span>ClassicMilk</span><small>Neutral</small></label>
-                        <label for="s3-2" class="shade-option"><span>CaramelBrew</span><small>Warm</small></label>
-                        <label for="s3-3" class="shade-option"><span>IcedVanilla</span><small>Cool</small></label>
-                    </div>
-                </div>
+                <h2 class="modal-title">Foundation</h2><div class="modal-price">₱499.00</div>
+                <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s3-1" class="shade-option"><span>ClassicMilk</span><small>Neutral</small></label><label for="s3-2" class="shade-option"><span>CaramelBrew</span><small>Warm</small></label><label for="s3-3" class="shade-option"><span>IcedVanilla</span><small>Cool</small></label></div></div>
                 <label for="add-3" class="btn-buy-now">ADD TO BAG</label>
             </div>
         </div>
@@ -163,26 +126,13 @@
     <div class="modal-overlay modal-4">
         <div class="modal-content">
             <label for="modal-4" class="close-modal">✕</label>
-            <input type="radio" name="shade-4" id="s4-1" class="shade-select-input">
-            <input type="radio" name="shade-4" id="s4-2" class="shade-select-input">
-            <input type="radio" name="shade-4" id="s4-3" class="shade-select-input">
+            <input type="radio" name="shade-4" id="s4-1" class="shade-select-input"><input type="radio" name="shade-4" id="s4-2" class="shade-select-input"><input type="radio" name="shade-4" id="s4-3" class="shade-select-input">
             <div class="modal-image">
-                <img src="images/Lipstick.jpg" class="img-default">
-                <img src="images/BerryTea.jpg" class="img-tone-1">
-                <img src="images/CocoaMilk.jpg" class="img-tone-2">
-                <img src="images/PeachCream.jpg" class="img-tone-3">
+                <img src="images/Lipstick.jpg" class="img-default"><img src="images/BerryTea.jpg" class="img-tone-1"><img src="images/CocoaMilk.jpg" class="img-tone-2"><img src="images/PeachCream.jpg" class="img-tone-3">
             </div>
             <div class="modal-details">
-                <h2 class="modal-title">Lipstick</h2>
-                <div class="modal-price">₱399.00</div>
-                <div class="shade-selector">
-                    <span class="shade-title">Select Tone:</span>
-                    <div class="tones-grid">
-                        <label for="s4-1" class="shade-option"><span>BerryTea</span><small>Neutral</small></label>
-                        <label for="s4-2" class="shade-option"><span>CocoaMilk</span><small>Warm</small></label>
-                        <label for="s4-3" class="shade-option"><span>PeachCream</span><small>Cool</small></label>
-                    </div>
-                </div>
+                <h2 class="modal-title">Lipstick</h2><div class="modal-price">₱399.00</div>
+                <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s4-1" class="shade-option"><span>BerryTea</span><small>Neutral</small></label><label for="s4-2" class="shade-option"><span>CocoaMilk</span><small>Warm</small></label><label for="s4-3" class="shade-option"><span>PeachCream</span><small>Cool</small></label></div></div>
                 <label for="add-4" class="btn-buy-now">ADD TO BAG</label>
             </div>
         </div>
@@ -191,26 +141,13 @@
     <div class="modal-overlay modal-5">
         <div class="modal-content">
             <label for="modal-5" class="close-modal">✕</label>
-            <input type="radio" name="shade-5" id="s5-1" class="shade-select-input">
-            <input type="radio" name="shade-5" id="s5-2" class="shade-select-input">
-            <input type="radio" name="shade-5" id="s5-3" class="shade-select-input">
+            <input type="radio" name="shade-5" id="s5-1" class="shade-select-input"><input type="radio" name="shade-5" id="s5-2" class="shade-select-input"><input type="radio" name="shade-5" id="s5-3" class="shade-select-input">
             <div class="modal-image">
-                <img src="images/LipGloss.jpg" class="img-default">
-                <img src="images/CrystalMilk.jpg" class="img-tone-1">
-                <img src="images/GoldenBoba.jpg" class="img-tone-2">
-                <img src="images/FrostJelly.jpg" class="img-tone-3">
+                <img src="images/LipGloss.jpg" class="img-default"><img src="images/CrystalMilk.jpg" class="img-tone-1"><img src="images/GoldenBoba.jpg" class="img-tone-2"><img src="images/FrostJelly.jpg" class="img-tone-3">
             </div>
             <div class="modal-details">
-                <h2 class="modal-title">Lip Gloss</h2>
-                <div class="modal-price">₱349.00</div>
-                <div class="shade-selector">
-                    <span class="shade-title">Select Tone:</span>
-                    <div class="tones-grid">
-                        <label for="s5-1" class="shade-option"><span>CrystalMilk</span><small>Neutral</small></label>
-                        <label for="s5-2" class="shade-option"><span>GoldenBoba</span><small>Warm</small></label>
-                        <label for="s5-3" class="shade-option"><span>FrostJelly</span><small>Cool</small></label>
-                    </div>
-                </div>
+                <h2 class="modal-title">Lip Gloss</h2><div class="modal-price">₱349.00</div>
+                <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s5-1" class="shade-option"><span>CrystalMilk</span><small>Neutral</small></label><label for="s5-2" class="shade-option"><span>GoldenBoba</span><small>Warm</small></label><label for="s5-3" class="shade-option"><span>FrostJelly</span><small>Cool</small></label></div></div>
                 <label for="add-5" class="btn-buy-now">ADD TO BAG</label>
             </div>
         </div>
@@ -219,26 +156,13 @@
     <div class="modal-overlay modal-6">
         <div class="modal-content">
             <label for="modal-6" class="close-modal">✕</label>
-            <input type="radio" name="shade-6" id="s6-1" class="shade-select-input">
-            <input type="radio" name="shade-6" id="s6-2" class="shade-select-input">
-            <input type="radio" name="shade-6" id="s6-3" class="shade-select-input">
+            <input type="radio" name="shade-6" id="s6-1" class="shade-select-input"><input type="radio" name="shade-6" id="s6-2" class="shade-select-input"><input type="radio" name="shade-6" id="s6-3" class="shade-select-input">
             <div class="modal-image">
-                <img src="images/Eyeshadow.jpg" class="img-default">
-                <img src="images/NudePallete.jpg" class="img-tone-1">
-                <img src="images/DarkPallete.jpg" class="img-tone-2">
-                <img src="images/RainbowPallete.jpg" class="img-tone-3">
+                <img src="images/Eyeshadow.jpg" class="img-default"><img src="images/NudePallete.jpg" class="img-tone-1"><img src="images/DarkPallete.jpg" class="img-tone-2"><img src="images/RainbowPallete.jpg" class="img-tone-3">
             </div>
             <div class="modal-details">
-                <h2 class="modal-title">Eyeshadow Palette</h2>
-                <div class="modal-price">₱599.00</div>
-                <div class="shade-selector">
-                    <span class="shade-title">Select Variant:</span>
-                    <div class="tones-grid">
-                        <label for="s6-1" class="shade-option"><span>Nude Pallete</span></label>
-                        <label for="s6-2" class="shade-option"><span>Dark Pallete</span></label>
-                        <label for="s6-3" class="shade-option"><span>Rainbow Pallete</span></label>
-                    </div>
-                </div>
+                <h2 class="modal-title">Eyeshadow Palette</h2><div class="modal-price">₱599.00</div>
+                <div class="shade-selector"><span class="shade-title">Select Variant:</span><div class="tones-grid"><label for="s6-1" class="shade-option"><span>Nude Pallete</span></label><label for="s6-2" class="shade-option"><span>Dark Pallete</span></label><label for="s6-3" class="shade-option"><span>Rainbow Pallete</span></label></div></div>
                 <label for="add-6" class="btn-buy-now">ADD TO BAG</label>
             </div>
         </div>
@@ -247,26 +171,13 @@
     <div class="modal-overlay modal-7">
         <div class="modal-content">
             <label for="modal-7" class="close-modal">✕</label>
-            <input type="radio" name="shade-7" id="s7-1" class="shade-select-input">
-            <input type="radio" name="shade-7" id="s7-2" class="shade-select-input">
-            <input type="radio" name="shade-7" id="s7-3" class="shade-select-input">
+            <input type="radio" name="shade-7" id="s7-1" class="shade-select-input"><input type="radio" name="shade-7" id="s7-2" class="shade-select-input"><input type="radio" name="shade-7" id="s7-3" class="shade-select-input">
             <div class="modal-image">
-                <img src="images/EyebrowPencil.jpg" class="img-default">
-                <img src="images/ChesnutBrown.jpg" class="img-tone-1">
-                <img src="images/DarkBrown.jpg" class="img-tone-2">
-                <img src="images/BlackTea.jpg" class="img-tone-3">
+                <img src="images/EyebrowPencil.jpg" class="img-default"><img src="images/ChesnutBrown.jpg" class="img-tone-1"><img src="images/DarkBrown.jpg" class="img-tone-2"><img src="images/BlackTea.jpg" class="img-tone-3">
             </div>
             <div class="modal-details">
-                <h2 class="modal-title">Eyebrow Pencil</h2>
-                <div class="modal-price">₱249.00</div>
-                <div class="shade-selector">
-                    <span class="shade-title">Select Shade:</span>
-                    <div class="tones-grid">
-                        <label for="s7-1" class="shade-option"><span>Chesnut Brown</span></label>
-                        <label for="s7-2" class="shade-option"><span>Dark Brown</span></label>
-                        <label for="s7-3" class="shade-option"><span>Black Tea</span></label>
-                    </div>
-                </div>
+                <h2 class="modal-title">Eyebrow Pencil</h2><div class="modal-price">₱249.00</div>
+                <div class="shade-selector"><span class="shade-title">Select Shade:</span><div class="tones-grid"><label for="s7-1" class="shade-option"><span>Chesnut Brown</span></label><label for="s7-2" class="shade-option"><span>Dark Brown</span></label><label for="s7-3" class="shade-option"><span>Black Tea</span></label></div></div>
                 <label for="add-7" class="btn-buy-now">ADD TO BAG</label>
             </div>
         </div>
@@ -275,26 +186,13 @@
     <div class="modal-overlay modal-8">
         <div class="modal-content">
             <label for="modal-8" class="close-modal">✕</label>
-            <input type="radio" name="shade-8" id="s8-1" class="shade-select-input">
-            <input type="radio" name="shade-8" id="s8-2" class="shade-select-input">
-            <input type="radio" name="shade-8" id="s8-3" class="shade-select-input">
+            <input type="radio" name="shade-8" id="s8-1" class="shade-select-input"><input type="radio" name="shade-8" id="s8-2" class="shade-select-input"><input type="radio" name="shade-8" id="s8-3" class="shade-select-input">
             <div class="modal-image">
-                <img src="images/Eyeliner.jpg" class="img-default">
-                <img src="images/AmberBrown.jpg" class="img-tone-1">
-                <img src="images/SoftBlack.jpg" class="img-tone-2">
-                <img src="images/TeaBlack.jpg" class="img-tone-3">
+                <img src="images/Eyeliner.jpg" class="img-default"><img src="images/AmberBrown.jpg" class="img-tone-1"><img src="images/SoftBlack.jpg" class="img-tone-2"><img src="images/TeaBlack.jpg" class="img-tone-3">
             </div>
             <div class="modal-details">
-                <h2 class="modal-title">Eyeliner</h2>
-                <div class="modal-price">₱299.00</div>
-                <div class="shade-selector">
-                    <span class="shade-title">Select Shade:</span>
-                    <div class="tones-grid">
-                        <label for="s8-1" class="shade-option"><span>Amber Brown</span></label>
-                        <label for="s8-2" class="shade-option"><span>Soft Black</span></label>
-                        <label for="s8-3" class="shade-option"><span>Tea Black</span></label>
-                    </div>
-                </div>
+                <h2 class="modal-title">Eyeliner</h2><div class="modal-price">₱299.00</div>
+                <div class="shade-selector"><span class="shade-title">Select Shade:</span><div class="tones-grid"><label for="s8-1" class="shade-option"><span>Amber Brown</span></label><label for="s8-2" class="shade-option"><span>Soft Black</span></label><label for="s8-3" class="shade-option"><span>Tea Black</span></label></div></div>
                 <label for="add-8" class="btn-buy-now">ADD TO BAG</label>
             </div>
         </div>
@@ -305,18 +203,11 @@
             <label for="modal-9" class="close-modal">✕</label>
             <input type="radio" name="shade-9" id="s9-1" class="shade-select-input">
             <div class="modal-image">
-                <img src="images/Mascara.jpg" class="img-default">
-                <img src="images/Black.jpg" class="img-tone-1">
+                <img src="images/Mascara.jpg" class="img-default"><img src="images/Black.jpg" class="img-tone-1">
             </div>
             <div class="modal-details">
-                <h2 class="modal-title">Mascara</h2>
-                <div class="modal-price">₱399.00</div>
-                <div class="shade-selector">
-                    <span class="shade-title">Shade:</span>
-                    <div class="tones-grid" style="grid-template-columns: 1fr;">
-                        <label for="s9-1" class="shade-option"><span>Black</span></label>
-                    </div>
-                </div>
+                <h2 class="modal-title">Mascara</h2><div class="modal-price">₱399.00</div>
+                <div class="shade-selector"><span class="shade-title">Shade:</span><div class="tones-grid" style="grid-template-columns: 1fr;"><label for="s9-1" class="shade-option"><span>Classic Black</span><small>Volumizing</small></label></div></div>
                 <label for="add-9" class="btn-buy-now">ADD TO BAG</label>
             </div>
         </div>
@@ -325,26 +216,13 @@
     <div class="modal-overlay modal-10">
         <div class="modal-content">
             <label for="modal-10" class="close-modal">✕</label>
-            <input type="radio" name="shade-10" id="s10-1" class="shade-select-input">
-            <input type="radio" name="shade-10" id="s10-2" class="shade-select-input">
-            <input type="radio" name="shade-10" id="s10-3" class="shade-select-input">
+            <input type="radio" name="shade-10" id="s10-1" class="shade-select-input"><input type="radio" name="shade-10" id="s10-2" class="shade-select-input"><input type="radio" name="shade-10" id="s10-3" class="shade-select-input">
             <div class="modal-image">
-                <img src="images/BlushOn.jpg" class="img-default">
-                <img src="images/Cherry.jpg" class="img-tone-1">
-                <img src="images/SweetPink.jpg" class="img-tone-2">
-                <img src="images/Velvet.jpg" class="img-tone-3">
+                <img src="images/BlushOn.jpg" class="img-default"><img src="images/Cherry.jpg" class="img-tone-1"><img src="images/SweetPink.jpg" class="img-tone-2"><img src="images/Velvet.jpg" class="img-tone-3">
             </div>
             <div class="modal-details">
-                <h2 class="modal-title">Blush On</h2>
-                <div class="modal-price">₱349.00</div>
-                <div class="shade-selector">
-                    <span class="shade-title">Select Tone:</span>
-                    <div class="tones-grid">
-                        <label for="s10-1" class="shade-option"><span>Cherry</span><small>Neutral</small></label>
-                        <label for="s10-2" class="shade-option"><span>Sweet Pink</span><small>Cool</small></label>
-                        <label for="s10-3" class="shade-option"><span>Velvet</span><small>Warm</small></label>
-                    </div>
-                </div>
+                <h2 class="modal-title">Blush On</h2><div class="modal-price">₱349.00</div>
+                <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s10-1" class="shade-option"><span>Cherry</span><small>Neutral</small></label><label for="s10-2" class="shade-option"><span>Sweet Pink</span><small>Cool</small></label><label for="s10-3" class="shade-option"><span>Velvet</span><small>Warm</small></label></div></div>
                 <label for="add-10" class="btn-buy-now">ADD TO BAG</label>
             </div>
         </div>
@@ -353,6 +231,7 @@
 
     <div class="container">
         <div class="main-shop-section">
+            
             <aside class="sidebar">
                 <div class="category-list">
                     <a href="#face" class="cat-link">Face</a>
@@ -366,74 +245,48 @@
                 <div id="face" class="products-group">
                     <h2 class="category-title">Face</h2>
                     <div class="products-grid-layout">
-                        <div class="product-card">
-                            <div class="p-image"><img src="images/Concealer.jpg" alt="Img"></div>
-                            <div class="p-info"><h3>Concealer</h3><div class="price">₱299.00</div>
-                            <label for="modal-1" class="btn-select-shade">SELECT SHADE</label></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="p-image"><img src="images/FacePowder.jpg" alt="Img"></div>
-                            <div class="p-info"><h3>Face Powder</h3><div class="price">₱349.00</div>
-                            <label for="modal-2" class="btn-select-shade">SELECT SHADE</label></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="p-image"><img src="images/Foundation.jpg" alt="Img"></div>
-                            <div class="p-info"><h3>Foundation</h3><div class="price">₱499.00</div>
-                            <label for="modal-3" class="btn-select-shade">SELECT SHADE</label></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="p-image"><img src="images/BlushOn.jpg" alt="Img"></div>
-                            <div class="p-info"><h3>Blush On</h3><div class="price">₱349.00</div>
-                            <label for="modal-10" class="btn-select-shade">SELECT SHADE</label></div>
-                        </div>
+                        <div class="product-card"><div class="p-image"><img src="images/Concealer.jpg" alt="Img"></div><div class="p-info"><h3>Concealer</h3><div class="price">₱299.00</div><label for="modal-1" class="btn-select-shade">SELECT SHADE</label></div></div>
+                        <div class="product-card"><div class="p-image"><img src="images/FacePowder.jpg" alt="Img"></div><div class="p-info"><h3>Face Powder</h3><div class="price">₱349.00</div><label for="modal-2" class="btn-select-shade">SELECT SHADE</label></div></div>
+                        <div class="product-card"><div class="p-image"><img src="images/Foundation.jpg" alt="Img"></div><div class="p-info"><h3>Foundation</h3><div class="price">₱499.00</div><label for="modal-3" class="btn-select-shade">SELECT SHADE</label></div></div>
+                        <div class="product-card"><div class="p-image"><img src="images/BlushOn.jpg" alt="Img"></div><div class="p-info"><h3>Blush On</h3><div class="price">₱349.00</div><label for="modal-10" class="btn-select-shade">SELECT SHADE</label></div></div>
                     </div>
                 </div>
 
                 <div id="lips" class="products-group">
                     <h2 class="category-title">Lips</h2>
                     <div class="products-grid-layout">
-                        <div class="product-card">
-                            <div class="p-image"><img src="images/Lipstick.jpg" alt="Img"></div>
-                            <div class="p-info"><h3>Lipstick</h3><div class="price">₱399.00</div>
-                            <label for="modal-4" class="btn-select-shade">SELECT SHADE</label></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="p-image"><img src="images/LipGloss.jpg" alt="Img"></div>
-                            <div class="p-info"><h3>Lip Gloss</h3><div class="price">₱349.00</div>
-                            <label for="modal-5" class="btn-select-shade">SELECT SHADE</label></div>
-                        </div>
+                        <div class="product-card"><div class="p-image"><img src="images/Lipstick.jpg" alt="Img"></div><div class="p-info"><h3>Lipstick</h3><div class="price">₱399.00</div><label for="modal-4" class="btn-select-shade">SELECT SHADE</label></div></div>
+                        <div class="product-card"><div class="p-image"><img src="images/LipGloss.jpg" alt="Img"></div><div class="p-info"><h3>Lip Gloss</h3><div class="price">₱349.00</div><label for="modal-5" class="btn-select-shade">SELECT SHADE</label></div></div>
                     </div>
                 </div>
 
                 <div id="eyes" class="products-group">
                     <h2 class="category-title">Eyes & Brows</h2>
                     <div class="products-grid-layout">
-                        <div class="product-card">
-                            <div class="p-image"><img src="images/Eyeshadow.jpg" alt="Img"></div>
-                            <div class="p-info"><h3>Eyeshadow Palette</h3><div class="price">₱599.00</div>
-                            <label for="modal-6" class="btn-select-shade">SELECT VARIANT</label></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="p-image"><img src="images/EyebrowPencil.jpg" alt="Img"></div>
-                            <div class="p-info"><h3>Eyebrow Pencil</h3><div class="price">₱249.00</div>
-                            <label for="modal-7" class="btn-select-shade">SELECT SHADE</label></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="p-image"><img src="images/Eyeliner.jpg" alt="Img"></div>
-                            <div class="p-info"><h3>Eyeliner</h3><div class="price">₱299.00</div>
-                            <label for="modal-8" class="btn-select-shade">SELECT SHADE</label></div>
-                        </div>
-                        <div class="product-card">
-                            <div class="p-image"><img src="images/Mascara.jpg" alt="Img"></div>
-                            <div class="p-info"><h3>Mascara</h3><div class="price">₱399.00</div>
-                            <label for="modal-9" class="btn-select-shade">ADD TO BAG</label></div>
-                        </div>
+                        <div class="product-card"><div class="p-image"><img src="images/Eyeshadow.jpg" alt="Img"></div><div class="p-info"><h3>Eyeshadow Palette</h3><div class="price">₱599.00</div><label for="modal-6" class="btn-select-shade">SELECT VARIANT</label></div></div>
+                        <div class="product-card"><div class="p-image"><img src="images/EyebrowPencil.jpg" alt="Img"></div><div class="p-info"><h3>Eyebrow Pencil</h3><div class="price">₱249.00</div><label for="modal-7" class="btn-select-shade">SELECT SHADE</label></div></div>
+                        <div class="product-card"><div class="p-image"><img src="images/Eyeliner.jpg" alt="Img"></div><div class="p-info"><h3>Eyeliner</h3><div class="price">₱299.00</div><label for="modal-8" class="btn-select-shade">SELECT SHADE</label></div></div>
+                        <div class="product-card"><div class="p-image"><img src="images/Mascara.jpg" alt="Img"></div><div class="p-info"><h3>Mascara</h3><div class="price">₱399.00</div><label for="modal-9" class="btn-select-shade">ADD TO BAG</label></div></div>
                     </div>
                 </div>
 
             </main>
-        </section>
+        </div>
     </div>
+
+    <label for="filter-switch" class="backdrop filter-backdrop"></label>
+
+    <script>
+        // Closes the mobile menu when a link is clicked
+        const menuLinks = document.querySelectorAll('.nav-links a');
+        const menuCheckbox = document.getElementById('menu-switch');
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuCheckbox.checked = false;
+            });
+        });
+    </script>
 
 </body>
 </html>
