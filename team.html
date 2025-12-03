@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team - Blush Babe</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
     <input type="checkbox" id="cart-switch" class="state-input">
     <input type="checkbox" id="filter-switch" class="state-input">
-
-    <input type="checkbox" id="add-1" class="add-input"><input type="checkbox" id="add-2" class="add-input">
+    <input type="checkbox" id="menu-switch" class="state-input"> <input type="checkbox" id="add-1" class="add-input"><input type="checkbox" id="add-2" class="add-input">
     <input type="checkbox" id="add-3" class="add-input"><input type="checkbox" id="add-4" class="add-input">
     <input type="checkbox" id="add-5" class="add-input"><input type="checkbox" id="add-6" class="add-input">
     <input type="checkbox" id="add-7" class="add-input"><input type="checkbox" id="add-8" class="add-input">
     <input type="checkbox" id="add-9" class="add-input"><input type="checkbox" id="add-10" class="add-input">
-    <input type="checkbox" id="add-11" class="add-input"><input type="checkbox" id="add-12" class="add-input">
 
-     <nav class="navbar">
+    <nav class="navbar">
         <div class="container nav-flex">
             
             <label for="menu-switch" class="menu-icon">☰</label>
@@ -31,10 +26,10 @@
             
             <ul class="nav-links">
                 <li class="mobile-only"><label for="menu-switch" class="close-menu">✕ CLOSE</label></li>
-                
-                <li><a href="index.html" class="active">Shop</a></li>
+
+                <li><a href="index.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="team.html">Team</a></li>
+                <li><a href="team.html" class="active">Team</a></li>
                 <li><a href="faq.html">FAQ</a></li>
             </ul>
 
@@ -44,6 +39,8 @@
         </div>
     </nav>
     
+    <label for="menu-switch" class="menu-backdrop"></label>
+
     <div class="cart-drawer">
         <div class="cart-header">
             <h2>Your Bag</h2>
@@ -51,14 +48,9 @@
         </div>
         <div class="cart-items">
             <div class="empty-msg">Your bag is empty.</div>
-            <div class="cart-item item-1">
-                <img src="https://placehold.co/100x100/be123c/fff?text=Lip" alt="Img">
-                <div class="item-details">
-                    <h4>Colourtint</h4>
-                    <p>₱349.00</p>
-                </div><label for="add-1" class="remove-btn">Remove</label>
+            <div class="cart-item item-1"><img src="images/Concealer.jpg" alt="Img"><div class="item-details"><h4>Concealer</h4><p>₱299.00</p></div><label for="add-1" class="remove-btn">Remove</label></div>
+            <div class="cart-item item-2"><img src="images/FacePowder.jpg" alt="Img"><div class="item-details"><h4>Face Powder</h4><p>₱349.00</p></div><label for="add-2" class="remove-btn">Remove</label></div>
             </div>
-        </div>
         <div class="cart-footer">
             <button class="btn-checkout">CHECKOUT</button>
         </div>
@@ -70,50 +62,50 @@
         <p style="text-align:center; color:#666; max-width:600px; margin:0 auto 40px auto;">
             The creative minds and passionate souls working behind the scenes.
         </p>
-
+        
         <div class="team-grid">
             <div class="team-card">
-                <img src="https://placehold.co/300x300/ff8b68/fff?text=Felix" class="team-img" alt="Felix">
+                <img src="images/Felix.jpg" class="team-img" alt="Felix">
                 <h3 class="team-name">Felix Dumat-ol Yucor</h3>
                 <p class="team-role">Founder & CEO</p>
             </div>
             <div class="team-card">
-                <img src="https://placehold.co/300x300/f4f4f4/333?text=Gerard" class="team-img" alt="Gerard">
+                <img src="images/Gerard.jpg" class="team-img" alt="Gerard">
                 <h3 class="team-name">Gerard Ilagan</h3>
                 <p class="team-role">Creative Director</p>
             </div>
             <div class="team-card">
-                <img src="https://placehold.co/300x300/f4f4f4/333?text=Jimuel" class="team-img" alt="Jimuel">
+                <img src="images/Jimuel.jpg" class="team-img" alt="Jimuel">
                 <h3 class="team-name">Jimuel Adajar</h3>
                 <p class="team-role">Operations Head</p>
             </div>
             <div class="team-card">
-                <img src="https://placehold.co/300x300/f4f4f4/333?text=Karl" class="team-img" alt="Karl">
+                <img src="images/Karl.jpg" class="team-img" alt="Karl">
                 <h3 class="team-name">Karl Max Tenorio</h3>
                 <p class="team-role">Marketing Lead</p>
             </div>
             <div class="team-card">
-                <img src="https://placehold.co/300x300/f4f4f4/333?text=Kris" class="team-img" alt="Kris">
+                <img src="images/Kris.jpg" class="team-img" alt="Kris">
                 <h3 class="team-name">Kris Roberto</h3>
                 <p class="team-role">Product Developer</p>
             </div>
             <div class="team-card">
-                <img src="https://placehold.co/300x300/f4f4f4/333?text=Mayo" class="team-img" alt="Mayo">
+                <img src="images/Mayo.jpg" class="team-img" alt="Mayo">
                 <h3 class="team-name">Mayo Jian</h3>
                 <p class="team-role">Social Media Manager</p>
             </div>
             <div class="team-card">
-                <img src="https://placehold.co/300x300/f4f4f4/333?text=Rafael" class="team-img" alt="Rafael">
+                <img src="images/Rafael.jpg" class="team-img" alt="Rafael">
                 <h3 class="team-name">Rafael Buela Alday</h3>
                 <p class="team-role">Sales Manager</p>
             </div>
             <div class="team-card">
-                <img src="https://placehold.co/300x300/f4f4f4/333?text=Rona" class="team-img" alt="Rona">
+                <img src="images/Rona.jpg" class="team-img" alt="Rona">
                 <h3 class="team-name">Rona Maderazo</h3>
                 <p class="team-role">Logistics</p>
             </div>
             <div class="team-card">
-                <img src="https://placehold.co/300x300/f4f4f4/333?text=Shoji" class="team-img" alt="Shoji">
+                <img src="images/Shoji.jpg" class="team-img" alt="Shoji">
                 <h3 class="team-name">Shoji Aruelo</h3>
                 <p class="team-role">Customer Success</p>
             </div>
@@ -121,5 +113,4 @@
     </div>
 
 </body>
-
 </html>
