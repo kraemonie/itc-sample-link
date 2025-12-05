@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blush Babe | Shop</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -13,24 +14,31 @@
     <input type="checkbox" id="menu-switch" class="state-input">
     <input type="checkbox" id="filter-switch" class="state-input">
     
-    <input type="checkbox" id="modal-1" class="modal-trigger"><input type="checkbox" id="modal-2" class="modal-trigger">
-    <input type="checkbox" id="modal-3" class="modal-trigger"><input type="checkbox" id="modal-4" class="modal-trigger">
-    <input type="checkbox" id="modal-5" class="modal-trigger"><input type="checkbox" id="modal-6" class="modal-trigger">
-    <input type="checkbox" id="modal-7" class="modal-trigger"><input type="checkbox" id="modal-8" class="modal-trigger">
-    <input type="checkbox" id="modal-9" class="modal-trigger"><input type="checkbox" id="modal-10" class="modal-trigger">
+    <input type="checkbox" id="modal-1" class="modal-trigger">
+    <input type="checkbox" id="modal-2" class="modal-trigger">
+    <input type="checkbox" id="modal-3" class="modal-trigger">
+    <input type="checkbox" id="modal-4" class="modal-trigger">
+    <input type="checkbox" id="modal-5" class="modal-trigger">
+    <input type="checkbox" id="modal-6" class="modal-trigger">
+    <input type="checkbox" id="modal-7" class="modal-trigger">
+    <input type="checkbox" id="modal-8" class="modal-trigger">
+    <input type="checkbox" id="modal-9" class="modal-trigger">
+    <input type="checkbox" id="modal-10" class="modal-trigger">
 
     <nav class="navbar">
         <div class="container nav-flex">
             <label for="menu-switch" class="menu-icon">☰</label>
             <a href="index.html" class="logo">BLUSH BABE</a>
+            
             <ul class="nav-links">
                 <li class="mobile-only"><label for="menu-switch" class="close-menu">✕ CLOSE</label></li>
                 <li><a href="index.html" class="active">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="team.html">Team</a></li>
             </ul>
+
             <label for="cart-switch" class="cart-trigger">
-                BAG (<span class="counter-target">0</span>)
+                BAG (<span id="js-cart-count">0</span>)
             </label>
         </div>
     </nav>
@@ -41,11 +49,13 @@
             <h2>Your Bag</h2>
             <label for="cart-switch" class="close-cart">✕</label>
         </div>
-        <div class="cart-items">
-            </div>
+        <div class="cart-items" id="js-cart-items"></div>
+        
         <div class="cart-footer">
-            <div class="cart-total-row"><span>Total:</span> <span id="cart-total">₱0.00</span></div>
-            <button class="btn-checkout">CHECKOUT</button>
+            <div class="total-row" style="display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: bold;">
+                <span>Total:</span> <span id="js-cart-total">₱0.00</span>
+            </div>
+            <button class="btn-checkout" onclick="checkout()">CHECKOUT</button>
         </div>
     </div>
     <label for="cart-switch" class="backdrop cart-backdrop"></label>
@@ -60,7 +70,7 @@
             <div class="modal-details">
                 <h2 class="modal-title">Concealer</h2><div class="modal-price">₱299.00</div>
                 <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s1-1" class="shade-option"><span>Milkfoam</span><small>Neutral</small></label><label for="s1-2" class="shade-option"><span>BrownSugar</span><small>Warm</small></label><label for="s1-3" class="shade-option"><span>WinterPearl</span><small>Cool</small></label></div></div>
-                <button class="btn-buy-now" onclick="addToCart('Concealer', 299, 'shade-1')">ADD TO BAG</button>
+                <button class="btn-buy-now" onclick="addToCart('Concealer', 299, 'shade-1', 'modal-1')">ADD TO BAG</button>
             </div>
         </div>
     </div>
@@ -75,7 +85,7 @@
             <div class="modal-details">
                 <h2 class="modal-title">Face Powder</h2><div class="modal-price">₱349.00</div>
                 <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s2-1" class="shade-option"><span>Oolong</span><small>Neutral</small></label><label for="s2-2" class="shade-option"><span>Roast</span><small>Warm</small></label><label for="s2-3" class="shade-option"><span>SnowCream</span><small>Cool</small></label></div></div>
-                <button class="btn-buy-now" onclick="addToCart('Face Powder', 349, 'shade-2')">ADD TO BAG</button>
+                <button class="btn-buy-now" onclick="addToCart('Face Powder', 349, 'shade-2', 'modal-2')">ADD TO BAG</button>
             </div>
         </div>
     </div>
@@ -90,7 +100,7 @@
             <div class="modal-details">
                 <h2 class="modal-title">Foundation</h2><div class="modal-price">₱499.00</div>
                 <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s3-1" class="shade-option"><span>ClassicMilk</span><small>Neutral</small></label><label for="s3-2" class="shade-option"><span>CaramelBrew</span><small>Warm</small></label><label for="s3-3" class="shade-option"><span>IcedVanilla</span><small>Cool</small></label></div></div>
-                <button class="btn-buy-now" onclick="addToCart('Foundation', 499, 'shade-3')">ADD TO BAG</button>
+                <button class="btn-buy-now" onclick="addToCart('Foundation', 499, 'shade-3', 'modal-3')">ADD TO BAG</button>
             </div>
         </div>
     </div>
@@ -105,7 +115,7 @@
             <div class="modal-details">
                 <h2 class="modal-title">Lipstick</h2><div class="modal-price">₱399.00</div>
                 <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s4-1" class="shade-option"><span>BerryTea</span><small>Neutral</small></label><label for="s4-2" class="shade-option"><span>CocoaMilk</span><small>Warm</small></label><label for="s4-3" class="shade-option"><span>PeachCream</span><small>Cool</small></label></div></div>
-                <button class="btn-buy-now" onclick="addToCart('Lipstick', 399, 'shade-4')">ADD TO BAG</button>
+                <button class="btn-buy-now" onclick="addToCart('Lipstick', 399, 'shade-4', 'modal-4')">ADD TO BAG</button>
             </div>
         </div>
     </div>
@@ -120,7 +130,7 @@
             <div class="modal-details">
                 <h2 class="modal-title">Lip Gloss</h2><div class="modal-price">₱349.00</div>
                 <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s5-1" class="shade-option"><span>CrystalMilk</span><small>Neutral</small></label><label for="s5-2" class="shade-option"><span>GoldenBoba</span><small>Warm</small></label><label for="s5-3" class="shade-option"><span>FrostJelly</span><small>Cool</small></label></div></div>
-                <button class="btn-buy-now" onclick="addToCart('Lip Gloss', 349, 'shade-5')">ADD TO BAG</button>
+                <button class="btn-buy-now" onclick="addToCart('Lip Gloss', 349, 'shade-5', 'modal-5')">ADD TO BAG</button>
             </div>
         </div>
     </div>
@@ -135,7 +145,7 @@
             <div class="modal-details">
                 <h2 class="modal-title">Eyeshadow Palette</h2><div class="modal-price">₱599.00</div>
                 <div class="shade-selector"><span class="shade-title">Select Variant:</span><div class="tones-grid"><label for="s6-1" class="shade-option"><span>Nude Pallete</span></label><label for="s6-2" class="shade-option"><span>Dark Pallete</span></label><label for="s6-3" class="shade-option"><span>Rainbow Pallete</span></label></div></div>
-                <button class="btn-buy-now" onclick="addToCart('Eyeshadow Palette', 599, 'shade-6')">ADD TO BAG</button>
+                <button class="btn-buy-now" onclick="addToCart('Eyeshadow Palette', 599, 'shade-6', 'modal-6')">ADD TO BAG</button>
             </div>
         </div>
     </div>
@@ -150,7 +160,7 @@
             <div class="modal-details">
                 <h2 class="modal-title">Eyebrow Pencil</h2><div class="modal-price">₱249.00</div>
                 <div class="shade-selector"><span class="shade-title">Select Shade:</span><div class="tones-grid"><label for="s7-1" class="shade-option"><span>Chesnut Brown</span></label><label for="s7-2" class="shade-option"><span>Dark Brown</span></label><label for="s7-3" class="shade-option"><span>Black Tea</span></label></div></div>
-                <button class="btn-buy-now" onclick="addToCart('Eyebrow Pencil', 249, 'shade-7')">ADD TO BAG</button>
+                <button class="btn-buy-now" onclick="addToCart('Eyebrow Pencil', 249, 'shade-7', 'modal-7')">ADD TO BAG</button>
             </div>
         </div>
     </div>
@@ -165,7 +175,7 @@
             <div class="modal-details">
                 <h2 class="modal-title">Eyeliner</h2><div class="modal-price">₱299.00</div>
                 <div class="shade-selector"><span class="shade-title">Select Shade:</span><div class="tones-grid"><label for="s8-1" class="shade-option"><span>Amber Brown</span></label><label for="s8-2" class="shade-option"><span>Soft Black</span></label><label for="s8-3" class="shade-option"><span>Tea Black</span></label></div></div>
-                <button class="btn-buy-now" onclick="addToCart('Eyeliner', 299, 'shade-8')">ADD TO BAG</button>
+                <button class="btn-buy-now" onclick="addToCart('Eyeliner', 299, 'shade-8', 'modal-8')">ADD TO BAG</button>
             </div>
         </div>
     </div>
@@ -180,7 +190,7 @@
             <div class="modal-details">
                 <h2 class="modal-title">Mascara</h2><div class="modal-price">₱399.00</div>
                 <div class="shade-selector"><span class="shade-title">Shade:</span><div class="tones-grid" style="grid-template-columns: 1fr;"><label for="s9-1" class="shade-option"><span>Classic Black</span><small>Volumizing</small></label></div></div>
-                <button class="btn-buy-now" onclick="addToCart('Mascara', 399, 'shade-9')">ADD TO BAG</button>
+                <button class="btn-buy-now" onclick="addToCart('Mascara', 399, 'shade-9', 'modal-9')">ADD TO BAG</button>
             </div>
         </div>
     </div>
@@ -195,7 +205,7 @@
             <div class="modal-details">
                 <h2 class="modal-title">Blush On</h2><div class="modal-price">₱349.00</div>
                 <div class="shade-selector"><span class="shade-title">Select Tone:</span><div class="tones-grid"><label for="s10-1" class="shade-option"><span>Cherry</span><small>Neutral</small></label><label for="s10-2" class="shade-option"><span>Sweet Pink</span><small>Cool</small></label><label for="s10-3" class="shade-option"><span>Velvet</span><small>Warm</small></label></div></div>
-                <button class="btn-buy-now" onclick="addToCart('Blush On', 349, 'shade-10')">ADD TO BAG</button>
+                <button class="btn-buy-now" onclick="addToCart('Blush On', 349, 'shade-10', 'modal-10')">ADD TO BAG</button>
             </div>
         </div>
     </div>
@@ -246,10 +256,18 @@
         </div>
     </div>
 
+    <div id="order-success" class="order-overlay">
+        <div class="order-content">
+            <div class="check-icon">✓</div>
+            <h2>Order Shipped!</h2>
+            <p>Thank you for shopping with Blush Babe.</p>
+            <button onclick="closeOrderPopup()">CONTINUE</button>
+        </div>
+    </div>
+
     <label for="filter-switch" class="backdrop filter-backdrop"></label>
 
     <script src="script.js"></script>
 
 </body>
 </html>
-
