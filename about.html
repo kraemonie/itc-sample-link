@@ -11,34 +11,23 @@
 <body>
 
     <input type="checkbox" id="cart-switch" class="state-input">
-    <input type="checkbox" id="filter-switch" class="state-input">
-    <input type="checkbox" id="menu-switch" class="state-input"> <input type="checkbox" id="add-1" class="add-input"><input type="checkbox" id="add-2" class="add-input">
-    <input type="checkbox" id="add-3" class="add-input"><input type="checkbox" id="add-4" class="add-input">
-    <input type="checkbox" id="add-5" class="add-input"><input type="checkbox" id="add-6" class="add-input">
-    <input type="checkbox" id="add-7" class="add-input"><input type="checkbox" id="add-8" class="add-input">
-    <input type="checkbox" id="add-9" class="add-input"><input type="checkbox" id="add-10" class="add-input">
+    <input type="checkbox" id="menu-switch" class="state-input">
 
     <nav class="navbar">
         <div class="container nav-flex">
-            
             <label for="menu-switch" class="menu-icon">☰</label>
-
             <a href="index.html" class="logo">BLUSH BABE</a>
-            
             <ul class="nav-links">
                 <li class="mobile-only"><label for="menu-switch" class="close-menu">✕ CLOSE</label></li>
-
                 <li><a href="index.html">Shop</a></li>
                 <li><a href="about.html" class="active">About</a></li>
                 <li><a href="team.html">Team</a></li>
             </ul>
-
             <label for="cart-switch" class="cart-trigger">
-                BAG (<span class="counter-target">0</span>)
+                BAG (<span id="js-cart-count">0</span>)
             </label>
         </div>
     </nav>
-    
     <label for="menu-switch" class="menu-backdrop"></label>
 
     <div class="cart-drawer">
@@ -46,11 +35,11 @@
             <h2>Your Bag</h2>
             <label for="cart-switch" class="close-cart">✕</label>
         </div>
-        <div class="cart-items">
+        <div class="cart-items" id="js-cart-items">
             </div>
         <div class="cart-footer">
-            <div class="cart-total-row"><span>Total:</span> <span id="cart-total">₱0.00</span></div>
-            <button class="btn-checkout">CHECKOUT</button>
+            <div class="total-row"><span>Total:</span> <span id="js-cart-total">₱0.00</span></div>
+            <button class="btn-checkout" onclick="checkout()">CHECKOUT</button>
         </div>
     </div>
     <label for="cart-switch" class="backdrop cart-backdrop"></label>
@@ -58,22 +47,29 @@
     <div class="about-page-container">
         <h1 class="section-title">We Make the World Blush.</h1>
         <div class="about-text">
-            <p>Welcome to Blush Babe. Blush Babe is an international company dedicated to providing beauty products in the industry. We believe that beauty is not only for the eye of the beholder, but beauty is for the eyes of everyone.
-</p>
+            <p>Welcome to Blush Babe. Blush Babe is an international company dedicated to providing beauty products in the industry. We believe that beauty is not only for the eye of the beholder, but beauty is for the eyes of everyone.</p>
             <br>
-            <p> Our products are toxic-free, paraben-free, gluten-free, sulfate-free, and cruelty-free, equipped with antioxidants, antihistamine, anti-inflammatory, antibiotic, with glutathione and silymarin extract.</p> <br>
-            <center><h2><strong>VISION</strong></h2>
-                <p>We envision Blush Babe to remain in the industry for decades. Providing confidence and acceptance to everyone. </p>
-                <h2><strong>MISSION</strong></h2>
-                <p>We aim to give love to every skin color and beauty. Keeping the business clean, relevant, and dynamic.
- </p> </center>
+            <p>Our products are toxic-free, paraben-free, gluten-free, sulfate-free, and cruelty-free, equipped with antioxidants, antihistamine, anti-inflammatory, antibiotic, with glutathione and silymarin extract.</p> 
+            <br>
+            <h2><strong>VISION</strong></h2>
+            <p>We envision Blush Babe to remain in the industry for decades. Providing confidence and acceptance to everyone.</p>
+            <br>
+            <h2><strong>MISSION</strong></h2>
+            <p>We aim to give love to every skin color and beauty. Keeping the business clean, relevant, and dynamic.</p>
+            
             <img src="images/headquarters.png" style="width:100%; margin-top:40px; border-radius:12px;">
         </div>
     </div>
 
+    <div id="order-success" class="order-overlay">
+        <div class="order-content">
+            <div class="check-icon">✓</div>
+            <h2>Order Shipped!</h2>
+            <p>Thank you for shopping with Blush Babe.</p>
+            <button onclick="closeOrderPopup()">CONTINUE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
-
-
-
