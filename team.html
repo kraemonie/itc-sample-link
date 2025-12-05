@@ -11,34 +11,25 @@
 <body>
 
     <input type="checkbox" id="cart-switch" class="state-input">
-    <input type="checkbox" id="filter-switch" class="state-input">
-    <input type="checkbox" id="menu-switch" class="state-input"> <input type="checkbox" id="add-1" class="add-input"><input type="checkbox" id="add-2" class="add-input">
-    <input type="checkbox" id="add-3" class="add-input"><input type="checkbox" id="add-4" class="add-input">
-    <input type="checkbox" id="add-5" class="add-input"><input type="checkbox" id="add-6" class="add-input">
-    <input type="checkbox" id="add-7" class="add-input"><input type="checkbox" id="add-8" class="add-input">
-    <input type="checkbox" id="add-9" class="add-input"><input type="checkbox" id="add-10" class="add-input">
+    <input type="checkbox" id="menu-switch" class="state-input">
 
     <nav class="navbar">
         <div class="container nav-flex">
-            
             <label for="menu-switch" class="menu-icon">☰</label>
-
             <a href="index.html" class="logo">BLUSH BABE</a>
             
             <ul class="nav-links">
                 <li class="mobile-only"><label for="menu-switch" class="close-menu">✕ CLOSE</label></li>
-
                 <li><a href="index.html">Shop</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="team.html" class="active">Team</a></li>
             </ul>
 
             <label for="cart-switch" class="cart-trigger">
-                BAG (<span class="counter-target">0</span>)
+                BAG (<span id="js-cart-count">0</span>)
             </label>
         </div>
     </nav>
-    
     <label for="menu-switch" class="menu-backdrop"></label>
 
     <div class="cart-drawer">
@@ -46,11 +37,11 @@
             <h2>Your Bag</h2>
             <label for="cart-switch" class="close-cart">✕</label>
         </div>
-        <div class="cart-items">
+        <div class="cart-items" id="js-cart-items">
             </div>
         <div class="cart-footer">
-            <div class="cart-total-row"><span>Total:</span> <span id="cart-total">₱0.00</span></div>
-            <button class="btn-checkout">CHECKOUT</button>
+            <div class="total-row"><span>Total:</span> <span id="js-cart-total">₱0.00</span></div>
+            <button class="btn-checkout" onclick="checkout()">CHECKOUT</button>
         </div>
     </div>
     <label for="cart-switch" class="backdrop cart-backdrop"></label>
@@ -109,6 +100,16 @@
             </div>
         </div>
     </div>
-<script src="script.js"></script>
+
+    <div id="order-success" class="order-overlay">
+        <div class="order-content">
+            <div class="check-icon">✓</div>
+            <h2>Order Shipped!</h2>
+            <p>Thank you for shopping with Blush Babe.</p>
+            <button onclick="closeOrderPopup()">CONTINUE</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
